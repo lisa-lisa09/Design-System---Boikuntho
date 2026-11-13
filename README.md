@@ -1,5 +1,7 @@
 # Boi Kuntho (বইকুণ্ঠ) Design System — build log
 
+> **13 Nov 2026 — mobile-first correction.** Boi Kuntho is a **mobile app**. All user screens are now 390 × 844 (checked at 360). Earlier desktop screens are archived on page `99.1 Desktop Exploration (Archive)`. See “Mobile correction” below; it supersedes the website-oriented notes that follow.
+
 The design system lives in the Figma file **Boikuntho**
 (`https://www.figma.com/design/xs3jtwLAeIJIhuCvcPKzXz/Boikuntho`).
 This repository holds only this written summary. All design work is in Figma.
@@ -61,3 +63,30 @@ from instances of these components.
   Inter or Plus Jakarta Sans. They were left untouched because they are the original work.
 - Run a contrast spot-check with real photos and a native-reader review of the Bangla copy
   before the final presentation.
+
+## Mobile correction (13 Nov 2026)
+
+**Reused unchanged:** 64 paint styles, logo components, 67 icons, text, effect and grid styles, and most 02.* components.
+
+**Updated components (mobile refinements, no duplicates):**
+- `Card/Book`: new `Layout=Compact` variants (171 px, fill 2-up; 158 px at 360) are now the mobile default.
+- `Bottom Nav`: now `Mode=Buyer|Seller`. Seller mode has Dashboard · Listings · Add book · Orders · Account. Items fill the width, so the bar is 360-safe.
+- `App Bar/Mobile`: new `Type=Root` for tab roots. `App Bar/Desktop` was renamed "(archived)".
+- `Button`: `State=Hover` renamed to `State=Pressed` (touch).
+- New: `Mobile/System Bar` (status bar, home indicator), `Mobile/Action Bar` (sticky Purchase / Dual / Single CTA), `Bottom Sheet/Header`.
+- `Upload/Thumbnail`: master fixes (cover tag width, no stray caption on the Add tile).
+
+**Docs:** the Cover, 01.5 Layout Grid (new “Mobile app viewport 390 × 844” section), 02.10, 02.11, 02.14 and 02.17 now describe a mobile app.
+
+**Mobile screens (`Mobile 390 / …`, fixed top and bottom bars, content scrolls):**
+- Buyer (03.2): Home · Search results · Search · Filter sheet · Search · No results · Book detail · Cart · Checkout · Order placed · Order status · Local exchange request.
+- Seller (03.3): Dashboard · List a book · 1 Details · List a book · 2 Photos & delivery · List a book · 2 Error · Listing published · Order · Needs evidence · Order · Ready to ship.
+- Wireframes (03.1): 8 low-fi 390 × 844 wireframes.
+
+**Prototype:** flows “Buyer journey — Home → Order status” (23 links), “Local exchange request”, and “Seller journey” (15 links).
+
+**QA:** all 17 mobile screens were cloned at 360 px with no overflow, and every Bangla run is set in Hind Siliguri or Anek Bangla.
+
+**Archived (not deleted):** 6 desktop screens, 6 desktop wireframes, and mobile v1 Home and Buyer order status are on page 99.1.
+
+**Still open:** optional screens (seller profile page, posts/reels feed, wishlist, notifications, account), the actual camera/gallery and bottom-sheet interactions (shown as static states), and real photos for covers and avatars.
